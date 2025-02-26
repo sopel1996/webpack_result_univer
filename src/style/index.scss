@@ -8,6 +8,7 @@
     padding: 0;
     box-sizing: border-box;
 }
+
 body{
     height: 100vh;
     width: 100vw;
@@ -44,10 +45,16 @@ body{
     .sound {
         width: 200px;
         height: 200px;
+        border: 2px solid #fff;
         border-radius: 10px;
         display: flex;
         align-items: center;
         justify-content: center;
+        transition: 0.5s;
+
+        &:hover{
+            background-size: 250%;
+        }
 
         .icon{
             display: block;
@@ -56,10 +63,17 @@ body{
             transition: background-image 0.5s;
         }
         
-        &.active .icon{
+        &.active{
+
+            border-color: #00f;
+
+            .icon{
             background-image: url(../assets/icons/pause.svg);
-        }
+        }}
         
+
+        &.pause
+
         &.active ~ input[type='range']{
             display: block;
         }
@@ -67,19 +81,19 @@ body{
     }
 
     .rainy {
-        background: url(../assets/rainy-bg.jpg) no-repeat 50% 50%/cover;
+        background: url(../assets/rainy-bg.jpg) no-repeat 50% 50%/200%;
         .icon{
             background: url(../assets/icons/cloud-rain.svg) 50% 50%/contain no-repeat;
         }
     }
     .winter {
-        background: url(../assets/winter-bg.jpg) no-repeat 50% 50%/cover;
+        background: url(../assets/winter-bg.jpg) no-repeat 50% 50%/200%;
         .icon{
             background: url(../assets/icons/cloud-snow.svg) 50% 50%/contain no-repeat;
         }
     }
     .summer {
-        background: url(../assets/summer-bg.jpg) no-repeat 50% 50%/cover;
+        background: url(../assets/summer-bg.jpg) no-repeat 50% 50%/200%;
         .icon{
             background: url(../assets/icons/sun.svg) 50% 50%/contain no-repeat;
         }
