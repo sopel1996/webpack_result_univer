@@ -66,13 +66,15 @@ body{
         &.active{
 
             border-color: #00f;
-
+            
             .icon{
-            background-image: url(../assets/icons/pause.svg);
-        }}
-        
-
-        &.pause
+                background-image: url(../assets/icons/pause.svg);
+            }}
+            
+            
+            &.pause{
+                border-color: #7c7c7c;
+            }   
 
         &.active ~ input[type='range']{
             display: block;
